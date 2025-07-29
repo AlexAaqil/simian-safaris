@@ -7,7 +7,7 @@
     <link rel="icon" href="{{ asset('assets/images/simian-safaris-logo.ico') }}" type="image/x-icon">
 
     <!-- Scripts / Styles -->
-    @vite('resources/css/guest-layout.css')
+    @vite('resources/css/guest.css')
 
     @isset($extra_head)
         {{ $extra_head }}

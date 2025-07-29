@@ -1,10 +1,18 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-DAPqxO7Q.css",
+    "file": "assets/app-Die-19QQ.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "names": [
       "app.css"
+    ]
+  },
+  "resources/css/guest.css": {
+    "file": "assets/guest-BNAnVKuX.css",
+    "src": "resources/css/guest.css",
+    "isEntry": true,
+    "names": [
+      "guest.css"
     ]
   },
   "resources/js/app.js": {

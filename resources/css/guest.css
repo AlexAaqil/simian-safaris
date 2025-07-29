@@ -1,0 +1,163 @@
+@import './globals.css';
+
+.guest_layout {
+    .container {
+        @apply px-4 py-6 md:px-16 mx-auto;
+    }
+
+    .CustomJumbotron {
+        @apply relative w-full min-h-[30vh] bg-cover bg-center flex items-center justify-center;
+        background-image: url('/public/assets/images/elephants.png');
+
+        &::before {
+            content: '';
+            @apply absolute inset-0 bg-black/50 z-0;
+        }
+
+        .container {
+            @apply relative z-10 text-center text-white;
+
+            h1 {
+                @apply text-4xl font-bold mb-4;
+            }
+
+            .breadcrumbs {
+                @apply flex justify-center items-center text-sm text-white;
+
+                a {
+                    @apply font-semibold hover:font-bold relative;
+
+                    &::after {
+                        content: '/';
+                        @apply mx-2 text-white/70;
+                    }
+                }
+
+                span {
+                    @apply text-white;
+                }
+            }
+        }
+    }
+
+    .image {
+        @apply bg-slate-200 rounded-lg;
+
+        img {
+            @apply w-full h-full object-cover rounded-lg;
+        }
+    }
+
+    .custom_cards {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+
+        .card {
+            @apply rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow duration-300 p-2;
+
+            .image {
+                @apply h-[300px];
+            }
+
+            .content {
+                @apply mt-4 space-y-2;
+
+                .title {
+                    @apply font-semibold;
+                }
+
+                .price_range,
+                a {
+                    @apply text-gray-500;
+                }
+
+                a {
+                    @apply hover:text-gray-900 hover:underline hover:decoration-solid transition duration-300;
+                }
+            }
+        }
+    }
+
+    .ckedited_description {
+        @apply text-base leading-relaxed space-y-4;
+
+        h1, h2, h3, h4, h5, h6 {
+            @apply font-semibold mb-6;
+        }
+
+        h1 {
+            @apply text-4xl;
+        }
+
+        h2 {
+            @apply text-xl;
+        }
+
+        h3 {
+            @apply text-lg;
+        }
+
+        p {
+            @apply leading-relaxed mb-4;
+        }
+
+        a {
+            @apply text-blue-600 underline hover:text-blue-800;
+        }
+
+        img {
+            @apply my-4 max-w-full rounded-lg shadow;
+        }
+
+        blockquote {
+            @apply border-l-4 border-gray-300 pl-4 italic text-gray-600 my-4;
+        }
+
+        ul, ol {
+            @apply pl-6 mb-4 space-y-2;
+        }
+
+        ul {
+            @apply list-disc;
+        }
+
+        ol {
+            @apply list-decimal;
+        }
+
+        li {
+            @apply leading-relaxed;
+
+            p {
+                @apply mb-2;
+            }
+
+            ul, ol {
+                @apply mt-2;
+            }
+        }
+
+        strong {
+            @apply font-semibold;
+        }
+
+        em {
+            @apply italic;
+        }
+
+        hr {
+            @apply my-6 border-t border-gray-200;
+        }
+    }
+}
+
+/* @import './components/buttons.css';
+@import './components/forms.css';
+
+@import './partials/navbar.css';
+@import './partials/footer.css';
+
+@import './pages/general/home-page.css';
+@import './pages/general/about-page.css';
+@import './pages/general/contact.css';
+@import './pages/Authentication.css';
+@import './pages/Tours.css'; */

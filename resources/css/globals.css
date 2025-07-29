@@ -1,0 +1,20 @@
+@import "./tailwind.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+.image,
+img {
+    @apply rounded-lg;
+}
+.image {
+    @apply bg-slate-200;
+
+    img {
+        @apply object-cover w-full h-full;
+    }
+}
