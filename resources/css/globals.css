@@ -1,10 +1,21 @@
 @import "./tailwind.css";
 
+:root {
+    --themed-bg: #0DA248;
+    --themed-text: #B44E09;
+    --themed-btn: #B44E09;
+    --themed-btn-hover: #a74707;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif, Arial, Helvetica;
+}
+
+p {
+    line-height: 1.5;
 }
 
 .image,

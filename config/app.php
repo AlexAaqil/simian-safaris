@@ -14,6 +14,18 @@ return [
     */
 
     'name' => env('APP_NAME', 'Simian Safaris'),
+    'slogan' => 'Explore African Wildlife',
+    'location' => 'Nairobi, Kenya',
+    'city' => 'Nairobi, Kenya',
+    'address' => 'CPF Metropark (Travellers House), <br />5th Floor, <br />Unit Door No. 10, <br />Opposite City Hall Annex, <br />Mama Ngina Street, <br />Nairobi',
+    'email' => 'info@simiansafaris.com',
+    'phone_number' => '+254 758 496 127',
+    'secondary_phone_number' => '+254 100 741 147',
+    'instagram' => 'https://www.instagram.com/simiansafaris',
+    'facebook' => 'https://www.facebook.com/SimianSafaris',
+    'linkedin' => 'https://www.linkedin.com/in/simian-safaris-0a8ab9330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+    'whatsapp' => 'https://wa.me/254722961971',
+    'tiktok' => 'https://www.tiktok.com/@qing_jia_safaris?_t=ZM-8xfXL0dbaEA&_r=1',
 
     /*
     |--------------------------------------------------------------------------

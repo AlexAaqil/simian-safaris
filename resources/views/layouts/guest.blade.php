@@ -16,9 +16,13 @@
     @endisset
 </head>
 <body class="antialiased">
+    <livewire:partials.navbar />
+
     <main class="guest_layout">
         {{ $slot }}
     </main>
+
+    <livewire:partials.footer />
 
     @isset($javascript)
         {{ $javascript }}

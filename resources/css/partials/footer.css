@@ -1,0 +1,87 @@
+footer {
+    @apply bg-[var(--themed-bg)] text-white py-12;
+
+    .container {
+        @apply px-4 md:px-16 mx-auto;
+
+        .content {
+            @apply grid grid-cols-1 lg:grid-cols-5 gap-8 items-start;
+
+            h3 {
+                @apply text-xl font-bold mb-4;
+            }
+
+            a,
+            p {
+                @apply text-white;
+            }
+
+            svg {
+                @apply fill-current;
+            }
+
+            p {
+                @apply mb-4;
+            }
+
+            .logo {
+                @apply w-[150px] h-[150px];
+
+                img {
+                    @apply w-full h-full object-contain;
+                }
+            }
+
+            .branding {
+                @apply lg:col-span-1;
+
+                .info {
+                    p {
+                        @apply flex items-center gap-2;
+                    }
+
+                    .location {
+                        @apply items-start;
+                    }
+                }
+            }
+
+            .quick_links,
+            .packages,
+            .connect {
+                @apply lg:justify-self-center;
+            }
+
+            .links {
+                @apply grid gap-2;
+
+                a {
+                    @apply hover:text-gray-200 transition-colors duration-300;
+                }
+            }
+
+            .connect {
+                .socials {
+                    @apply flex items-end space-x-4 mb-4;
+                }
+
+                .contacts {
+                    @apply mt-6;
+
+                    p {
+                        @apply grid gap-1 font-semibold tracking-wide;
+                    }
+                }
+            }
+        }
+
+        .copyrights {
+            @apply border-t border-gray-100 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center;
+
+            .text,
+            .text a {
+                @apply text-sm;
+            }
+        }
+    }
+}

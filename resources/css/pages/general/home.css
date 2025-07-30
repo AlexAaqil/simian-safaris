@@ -1,0 +1,98 @@
+.HomePage {
+    section {
+        .section_header {
+            @apply mb-4;
+
+            h2 {
+                @apply text-2xl md:text-3xl font-bold;
+            }
+
+            p {
+                @apply text-[var(--themed-text)] font-semibold mb-2;
+            }
+        }
+
+        button,
+        a.btn {
+            @apply bg-[var(--themed-btn)] hover:bg-[var(--themed-btn-hover)] text-white rounded-full;
+        }
+    }
+
+    .Hero {
+        @apply relative flex items-center justify-center min-h-[85dvh] w-full overflow-hidden;
+
+        video {
+            @apply absolute inset-0 w-full h-full object-cover z-0
+        }
+
+        .mask {
+            @apply absolute inset-0 bg-black/50 z-10;
+        }
+
+        .content {
+            @apply relative z-20 flex flex-col items-center justify-center text-center w-full px-4;
+
+            p {
+                @apply text-white text-xl md:text-2xl max-w-2xl mx-auto drop-shadow-md mb-4;
+            }
+
+            .title{
+                @apply text-white text-lg md:text-xl font-bold drop-shadow-lg mb-4 tracking-wide;
+            }
+
+            .subtitle {
+                @apply text-2xl md:text-5xl font-bold;
+            }
+        }
+    }
+
+    .About {
+        @apply py-16 bg-gray-100;
+
+        .container {
+            @apply grid grid-cols-1 md:grid-cols-2 items-center justify-between gap-8;
+
+            .content {
+                @apply text-gray-800;
+
+                .text {
+                    .subtitle {
+                        @apply text-[var(--themed-text)] font-semibold text-lg mt-6 mb-2;
+                    }
+
+                    .btn_wrapper {
+                        @apply mt-8;
+                    }
+                }
+            }
+
+            .image {
+                @apply h-[600px] justify-self-center;
+            }
+        }
+    }
+
+    .CTA {
+        @apply py-16;
+
+        .container {
+            @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+
+            .image {
+                @apply h-[450px] justify-self-center;
+            }
+
+            .content {
+                .text {
+                    p {
+                        @apply max-w-2xl;
+                    }
+
+                    .btns_group {
+                        @apply mt-8;
+                    }
+                }
+            }
+        }
+    }
+}
