@@ -150,17 +150,17 @@
     }
 }
 
+@import './components/forms.css';
 @import './components/buttons.css';
 
 @import './partials/navbar.css';
 @import './partials/footer.css';
 
 @import './pages/general/home.css';
+@import './pages/Authentication.css';
 
 /*
-@import './components/forms.css';
-
 @import './pages/general/about-page.css';
 @import './pages/general/contact.css';
-@import './pages/Authentication.css';
-@import './pages/Tours.css'; */
+@import './pages/Tours.css';
+*/

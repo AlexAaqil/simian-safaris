@@ -163,13 +163,13 @@
     }
 }
 
-/* @import './components/buttons.css';
+@import './components/buttons.css';
 @import './components/forms.css';
 @import './components/tables.css';
 
 @import './partials/app-navbar.css';
 
 @import './pages/Dashboard.css';
-@import './pages/ContactMessages.css';
 @import './pages/Users.css';
-@import './pages/Tours.css'; */
+@import './pages/ContactMessages.css';
+@import './pages/Tours.css';

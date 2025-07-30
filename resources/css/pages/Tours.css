@@ -1,0 +1,229 @@
+.Tours,
+.TourCategories {
+    .container {
+        .tours_list,
+        .tour_categories_list {
+            @apply grid grid-cols-1 md:grid-cols-4 gap-8;
+
+            .tour,
+            .tour_category {
+                @apply rounded-lg bg-blue-50 shadow-md;
+
+                .image {
+                    @apply h-[300px];
+                }
+
+                .content {
+                    @apply py-2 px-4;
+
+                    .info {
+                        .title {
+                            @apply font-semibold;
+                        }
+
+                        .price {
+                            @apply mt-4 text-gray-700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.TourDetailsPage {
+    .tour {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+
+        .images_wrapper {
+            .main_image {
+                .image {
+                    @apply h-[520px];
+                }
+            }
+
+            .other_images {
+                @apply flex gap-6 mt-6;
+
+                .image {
+                    @apply h-[100px] w-[100px];
+                }
+
+                .thumbnail {
+                    cursor: pointer;
+                    border: 2px solid transparent;
+                    transition: border 0.2s;
+                }
+
+                .thumbnail.active {
+                    border: 2px solid #007bff;
+                }
+            }
+        }
+
+        .content_wrapper {
+            @apply px-2 py-2 md:py-8;
+
+            .title {
+                @apply font-bold text-4xl;
+            }
+
+            .price {
+                @apply text-gray-700 font-bold text-2xl mt-6;
+            }
+
+            .summary {
+                @apply text-base mt-6;
+            }
+
+            .extra_details {
+                @apply mt-6;
+
+                p {
+                    @apply flex gap-2;
+
+                    span {
+                        &:first-of-type {
+                            @apply font-semibold shrink-0 w-[100px] truncate;
+                          }
+
+                          &:not(:first-of-type) {
+                            @apply flex-1;
+                          }
+                    }
+                }
+            }
+
+            .action_btn {
+                @apply mt-8;
+
+                .buttons_group {
+                    .btn {
+                        @apply bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-lg tracking-wide;
+                    }
+                }
+            }
+        }
+    }
+
+    .tour_details_wrapper {
+        @apply w-[95dvw];
+
+        .ckedited_description {
+            @apply mt-8;
+        }
+
+        .itineraries {
+            @apply mt-8;
+
+            h3 {
+                @apply text-xl font-bold mb-2;
+            }
+
+            .itinerary {
+                @apply mb-4;
+
+                .title,
+                .description {
+                    @apply px-4;
+                }
+
+                .title {
+                    @apply flex justify-between items-center cursor-pointer bg-gray-100 text-lg text-gray-900 rounded-lg py-2;
+                }
+
+                .description {
+                    @apply border-b border-gray-200 py-2;
+                }
+            }
+        }
+    }
+
+    .other_tours {
+        @apply mt-6;
+
+        h2 {
+            @apply py-4 font-bold text-4xl;
+        }
+    }
+}
+
+.DestinationDetailsPage {
+    .hero_section {
+        @apply pt-12 pb-8 px-4;
+
+        .image {
+            @apply relative rounded-lg h-[40dvh] md:h-[70dvh];
+
+            .overlay {
+                @apply rounded-lg absolute inset-0 bg-black/50 z-0;
+            }
+
+            .text {
+                @apply absolute z-10 top-0 left-0 w-full h-full flex flex-col justify-center items-center gap-4 md:gap-6 text-center px-4 text-white;
+
+                h1 {
+                    @apply font-bold text-6xl;
+                }
+            }
+
+            img {
+                @apply rounded-lg object-cover w-full h-full;
+            }
+        }
+    }
+
+    .container {
+        .other_destinations {
+            @apply mt-24;
+
+            h2 {
+                @apply text-2xl font-bold  mb-4;
+            }
+        }
+    }
+}
+
+#itineraries-wrapper {
+    .itinerary-row {
+        .inputs_group_3 {
+            @apply grid grid-cols-12 gap-4;
+
+            .inputs {
+                &:nth-child(1) { @apply col-span-1; }
+                &:nth-child(2) { @apply col-span-5; }
+                &:nth-child(3) { @apply col-span-6; }
+            }
+        }
+    }
+}
+
+.Bookings {
+    .container {
+        .bookings {
+            .booking {
+                @apply border-b border-gray-300 py-2;
+            }
+        }
+    }
+}
+
+.BookingForm {
+    .form_details {
+        @apply mb-6;
+
+        p {
+            @apply grid grid-cols-12 gap-2 mb-1;
+
+            span {
+                &:first-of-type {
+                    @apply col-span-3 text-gray-600;
+                }
+
+                &:last-of-type {
+                    @apply col-span-9 font-semibold;
+                }
+            }
+        }
+    }
+}

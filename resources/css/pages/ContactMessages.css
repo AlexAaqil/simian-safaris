@@ -1,0 +1,159 @@
+.ContactMessages {
+    @apply h-[calc(100dvh-4rem)] bg-gray-50;
+
+    .messages_container {
+        @apply relative h-full grid grid-cols-1 lg:grid-cols-4;
+
+        .messages_list {
+            @apply h-full lg:col-span-1 bg-white border-r border-gray-200 lg:block overflow-y-auto;
+
+            .messages_header {
+                @apply sticky top-0 bg-white p-4 border-b border-gray-200 z-10;
+
+                h2 {
+                    @apply text-lg font-bold mb-1;
+                }
+
+                .stats {
+                    @apply flex items-center gap-2 text-sm text-gray-600;
+
+                   span:first-child {
+                        @apply after:content-["."] after:mx-2 after:text-gray-800;
+                   }
+
+                   span:last-child {
+                        @apply text-blue-600;
+                   }
+                }
+            }
+
+            .messages {
+                @apply divide-y divide-gray-200;
+
+                .message {
+                    @apply p-4 hover:bg-gray-50 cursor-pointer flex items-start gap-3;
+
+                    &.active {
+                        @apply bg-blue-50;
+                    }
+
+                   .avatar {
+                        @apply w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-semibold;
+                    }
+
+                    .message_content {
+                        @apply flex-1 min-w-0;
+
+                        .header {
+                            @apply flex items-center justify-between gap-2;
+
+                            .name {
+                                @apply flex items-center gap-1;
+
+                                h3 {
+                                    @apply font-medium truncate;
+                                }
+                            }
+
+                            .date {
+                                @apply text-sm text-gray-500;
+                            }
+                        }
+
+                        .message_body {
+                            @apply mt-1 flex items-center justify-between gap-2;
+
+                           .preview_text {
+                                @apply text-sm text-gray-600 truncate;
+                            }
+
+                            .unread_badge {
+                                @apply px-2 py-0.5 text-xs bg-red-100 text-red-600 rounded-full;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .pagination {
+                @apply sticky bottom-0 bg-white p-4 border-t border-gray-200;
+            }
+        }
+
+        .message_details {
+            @apply h-full lg:col-span-3 bg-gray-50;
+            @apply lg:block overflow-y-auto;
+
+            @media (max-width: 1023px) {
+                @apply fixed inset-0 z-20 h-full mt-12;
+            }
+
+            .details_header {
+                @apply sticky top-0 bg-white p-4 border-b border-gray-200;
+                @apply flex items-center gap-4;
+
+                .back-button {
+                    @apply p-2 hover:bg-gray-100 rounded-lg;
+                }
+
+                .contact_details {
+
+                    .contact_info {
+                        @apply flex items-center gap-3;
+
+                        .avatar {
+                            @apply w-12 h-12 rounded-full bg-blue-100 text-blue-600;
+                            @apply flex items-center justify-center text-xl font-semibold;
+                        }
+
+                        .info {
+                            h3 {
+                                @apply font-semibold;
+                            }
+
+                            p {
+                                @apply text-sm text-gray-600;
+                            }
+                        }
+                    }
+
+                    .actions {
+                        @apply ml-auto;
+
+                        @media (max-width: 1023px) {
+                            @apply mt-2;
+                        }
+
+                        .important_btn {
+                            @apply p-2 text-gray-400 hover:text-gray-600 rounded-lg;
+
+                            &.active {
+                                @apply text-yellow-500;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .message_content {
+                @apply p-4;
+
+                .message_bubble {
+                    @apply bg-white p-4 rounded-lg shadow-sm;
+                }
+
+                .message_meta {
+                    @apply mt-2 text-sm text-gray-500;
+                }
+            }
+
+            .no_message_selected {
+                @apply h-full flex items-center justify-center;
+
+                p {
+                    @apply text-gray-500;
+                }
+            }
+        }
+    }
+}

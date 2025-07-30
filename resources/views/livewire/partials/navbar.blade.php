@@ -70,7 +70,7 @@
                         <!-- Categories -->
                         @foreach ($tour_categories as $category)
                             <a
-                                href="{{ route('categorized-tours-page', ['category' => $category->slug]) }}"
+                                href="{{ Route::has('categorized-tours-page') ? route('categorized-tours-page', ['category' => $category->slug]) : '#' }}"
                                 wire:navigate
                                 class="block text-sm lg:text-base text-gray-800 hover:text-primary hover:underline"
                             >
