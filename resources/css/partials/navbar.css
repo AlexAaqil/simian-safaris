@@ -1,48 +1,73 @@
+/* Main Navigation */
 .guest_nav {
-    @apply sticky top-0 left-0 right-0 z-50 bg-white text-gray-900 font-semibold;
+    @apply relative sticky top-0 left-0 right-0 z-50 bg-white text-gray-900 font-semibold py-2;
 
     .container {
         @apply flex items-center justify-between flex-wrap py-4 px-4 md:px-16 mx-auto;
+
 
         .branding a {
             @apply flex items-center gap-2 text-lg font-bold text-gray-900;
         }
 
+        .burger_menu {
+            @apply flex flex-col justify-center items-center space-y-1.5 cursor-pointer md:hidden;
+
+            span {
+                @apply w-6 h-0.5 bg-gray-900 block transition duration-300 ease-in-out;
+            }
+        }
+
         .nav_links {
             @apply w-full md:w-auto hidden md:flex md:items-center md:space-x-8 mt-6 md:mt-0;
 
-            .main_links a,
-            .other_links a {
-                @apply block md:inline-block text-gray-900 py-2 md:py-0 font-semibold hover:text-blue-800 transition-colors;
-            }
-
             .main_links {
-                @apply md:flex md:space-x-8;
-            }
+                @apply flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0;
 
-            .main_links a.active {
-                @apply text-blue-800 font-bold border-b-2 border-blue-800;
+                a {
+                    @apply block md:inline-block text-gray-900 py-2 md:py-0 font-semibold hover:text-blue-800 transition-colors;
+                }
+
+                a.active {
+                    @apply text-blue-800 font-bold border-b-2 border-blue-800;
+                }
             }
 
             .other_links {
                 @apply mt-4 md:mt-0;
 
                 a {
-                    @apply md:bg-[var(--themed-btn)] md:text-white hover:bg-[var(--themed-btn-hover)] hover:text-white md:rounded-full md:py-2 md:px-6;
+                    @apply md:bg-[var(--themed-btn)] md:text-white hover:bg-[var(--themed-btn-hover)] hover:text-white md:rounded-full md:py-4 md:px-8;
+                }
+            }
+
+            .nav_dropdown {
+                @apply relative;
+
+                button {
+                    @apply flex items-center gap-1;
+                }
+
+                .dropdown_icon {
+                    @apply h-4 w-4 transition-transform;
+                }
+
+                .dropdown_icon.open {
+                    @apply rotate-180;
+                }
+
+                .dropdown_menu {
+                    @apply absolute left-0 mt-2 w-56 md:w-64 bg-white shadow-xl rounded-lg z-50 py-4 px-4 flex flex-col space-y-4 lg:space-y-6 border border-gray-200;
+
+                    a {
+                        @apply block px-4 py-2 text-gray-900 hover:bg-gray-50 hover:text-blue-800 transition-colors;
+                    }
                 }
             }
         }
 
         .nav_links.open {
             @apply block;
-        }
-
-        .burger_menu {
-            @apply flex flex-col justify-center items-center space-y-1 cursor-pointer md:hidden;
-
-            span {
-                @apply w-6 h-0.5 bg-gray-900 block transition duration-300 ease-in-out;
-            }
         }
     }
 }

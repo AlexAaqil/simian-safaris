@@ -1,11 +1,11 @@
 <footer>
     <div class="container">
         <div class="content">
-            <div class="logo">
-                <x-app-logo />
-            </div>
-
             <div class="branding">
+                {{-- <div class="logo">
+                    <x-app-logo />
+                </div> --}}
+
                 <h3>{{ config('app.name') }}</h3>
                 <p>{{ config('app.slogan') }}</p>
                 <div class="info">
@@ -13,12 +13,15 @@
                         {!! config('app.address') !!}
                     </p>
                 </div>
+
+                <div class="image">
+                    <img src="{{ asset('assets/images/payment-methods.png') }}" alt="Payment Methods Accepted" loading="lazy">
+                </div>
             </div>
 
             <div class="quick_links">
                 <h3>Quick Links</h3>
                 <div class="links">
-                    <a href="{{ Route::has('login') ? route('login') : '#' }}" wire:navigate>Login</a>
                     <a href="{{ Route::has('home-page') ? route('home-page') : '#' }}" wire:navigate>Home</a>
                     <a href="{{ Route::has('about-page') ? route('about-page') : '#' }}" wire:navigate>About</a>
                     <a href="{{ Route::has('tours-page') ? route('tours-page') : '#' }}" wire:navigate>Tours</a>

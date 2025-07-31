@@ -1,28 +1,30 @@
-.Tours,
-.TourCategories {
-    .container {
-        .tours_list,
-        .tour_categories_list {
-            @apply grid grid-cols-1 md:grid-cols-4 gap-8;
+.app_layout {
+    .Tours,
+    .TourCategories {
+        .container {
+            .tours_list,
+            .tour_categories_list {
+                @apply grid grid-cols-1 md:grid-cols-4 gap-8;
 
-            .tour,
-            .tour_category {
-                @apply rounded-lg bg-blue-50 shadow-md;
+                .tour,
+                .tour_category {
+                    @apply rounded-lg bg-blue-50 shadow-md;
 
-                .image {
-                    @apply h-[300px];
-                }
+                    .image {
+                        @apply h-[300px];
+                    }
 
-                .content {
-                    @apply py-2 px-4;
+                    .content {
+                        @apply py-2 px-4;
 
-                    .info {
-                        .title {
-                            @apply font-semibold;
-                        }
+                        .info {
+                            .title {
+                                @apply font-semibold;
+                            }
 
-                        .price {
-                            @apply mt-4 text-gray-700;
+                            .price {
+                                @apply mt-4 text-gray-700;
+                            }
                         }
                     }
                 }

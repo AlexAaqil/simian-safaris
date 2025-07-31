@@ -9,11 +9,11 @@
     <!-- Scripts / Styles -->
     @vite('resources/css/guest.css')
 
-    @isset($extra_head)
+    @if(isset($extra_head))
         {{ $extra_head }}
     @else
         <title>Simian Safaris | Best Tour and Travel Company in Nairobi, Kenya</title>
-    @endisset
+    @endif
 </head>
 <body class="antialiased">
     <livewire:partials.navbar />

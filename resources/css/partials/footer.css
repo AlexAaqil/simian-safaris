@@ -5,7 +5,7 @@ footer {
         @apply px-4 md:px-16 mx-auto;
 
         .content {
-            @apply grid grid-cols-1 lg:grid-cols-5 gap-8 items-start;
+            @apply grid grid-cols-1 lg:grid-cols-4 gap-8 items-start;
 
             h3 {
                 @apply text-xl font-bold mb-4;
@@ -33,8 +33,6 @@ footer {
             }
 
             .branding {
-                @apply lg:col-span-1;
-
                 .info {
                     p {
                         @apply flex items-center gap-2;
