@@ -22,6 +22,8 @@ class TourController extends Controller
     {
         $validated_data = $request->validated();
 
+        unset($validated_data['images']);
+
         $tour = Tour::create($validated_data);
 
         if (!empty($validated_data['itineraries'])) {
@@ -63,6 +65,8 @@ class TourController extends Controller
     public function update(TourRequest $request, Tour $tour)
     {
         $validated_data = $request->validated();
+
+        unset($validated_data['images']);
 
         $tour->update($validated_data);
 
