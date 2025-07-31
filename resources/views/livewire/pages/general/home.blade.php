@@ -44,7 +44,7 @@
     <section class="Tours">
         <div class="container">
             <div class="section_header">
-                <p>YOUR SAFARI ADVENTURE STARTS HERE</p>
+                <p>YOUR ADVENTURE STARTS HERE</p>
                 <h2>Discover Our Safaris</h2>
             </div>
 
