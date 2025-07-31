@@ -28,7 +28,7 @@ use App\Livewire\Pages\Users\Form as CreateUser;
 use App\Livewire\Pages\Users\Form as EditUser;
 
 Route::get('/', HomePage::class)->name('home-page');
-Route::get('/about', AboutPage::class)->name('about-page');
+Route::get('about', AboutPage::class)->name('about-page');
 Route::get('tours', ToursPage::class)->name('tours-page');
 Route::get('tours/category/{category}/', CategorizedToursPage::class)->name('categorized-tours-page');
 Route::get('tours/{tour}', TourDetailsPage::class)->name('tour-details-page');
