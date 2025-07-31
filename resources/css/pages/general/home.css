@@ -85,6 +85,8 @@
     }
 
     .Destinations {
+        @apply bg-gray-100;
+
         .container {
             .section_header {
                 @apply text-center;
