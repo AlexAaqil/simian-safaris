@@ -40,6 +40,64 @@
         </div>
     </section>
 
+    <section class="Tours">
+        <div class="container">
+            <div class="section_header">
+                <p>EXPLORE OUR Safaris</p>
+                <h2>Discover Our Safaris</h2>
+            </div>
+
+            <div class="tours_list custom_cards">
+                @foreach($tours as $tour)
+                    <div class="tour card">
+                        <div class="image">
+                            <img src="{{ $tour->image }}" alt="{{ $tour->title }}">
+                        </div>
+
+                        <div class="content">
+                            <p class="title">{{ $tour->title }}</p>
+                            <p class="price">
+                                <span>$ {{ number_format($tour->price) }}</span>
+                                @if($tour->price_ranges_to)
+                                    <span>- $ {{ number_format($tour->price_ranges_to, 2) }}</span>
+                                @endif
+                            </p>
+                            <div class="button_wrapper">
+                                <a href="{{ Route::has('tour-details-page') ? route('tour-details-page', $tour->slug) : '#' }}" wire:navigate class="btn_link">View</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section class="Destinations">
+        <div class="container">
+            <div class="section_header">
+                <p>EXCELLENT PLACES TO GO</p>
+                <h2>Discover Our Destinations</h2>
+            </div>
+
+            <div class="destinations_list custom_cards">
+                @foreach($destinations as $destination)
+                    <div class="destination card">
+                        <div class="image">
+                            <img src="{{ $destination->image }}" alt="{{ $destination->title }}">
+                        </div>
+
+                        <div class="content">
+                            <p class="title">{{ $destination->title }}</p>
+                            <div class="button_wrapper">
+                                <a href="{{ Route::has('destination-details-page') ? route('destination-details-page', $destination->slug) : '#' }}" wire:navigate class="btn_link">View</a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
     <section class="CTA">
         <div class="container">
             <div class="image">

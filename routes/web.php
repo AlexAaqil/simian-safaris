@@ -3,6 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Pages\General\Home as HomePage;
 use App\Livewire\Pages\General\About as AboutPage;
+use App\Livewire\Pages\General\Tours\Tours\Index as ToursPage;
+use App\Livewire\Pages\General\Tours\Tours\Details as TourDetailsPage;
+use App\Livewire\Pages\General\Tours\Tours\Categorized as CategorizedToursPage;
+use App\Livewire\Pages\General\Tours\Destinations\Index as DestinationsPage;
+use App\Livewire\Pages\General\Tours\Destinations\Details as DestinationDetailsPage;
+use App\Livewire\Pages\Tours\Bookings\Form as BookTour;
+use App\Livewire\Pages\Tours\Bookings\Success as BookTourSuccess;
 
 use App\Livewire\Pages\Dashboard\Index as Dashboard;
 use App\Livewire\Pages\Tours\Categories\Index as TourCategories;
@@ -12,8 +19,6 @@ use App\Http\Controllers\Tours\TourController;
 use App\Livewire\Pages\Tours\Destinations\Index as TourDestinations;
 use App\Http\Controllers\Tours\DestinationController;
 use App\Http\Controllers\Tours\TourImageController;
-use App\Livewire\Pages\Tours\Bookings\Form as BookTour;
-use App\Livewire\Pages\Tours\Bookings\Success as BookTourSuccess;
 use App\Livewire\Pages\Tours\Bookings\Index as Bookings;
 use App\Livewire\Pages\Tours\Bookings\Edit as EditBookings;
 use App\Livewire\Pages\ContactMessages\Index as ContactMessages;
@@ -24,6 +29,13 @@ use App\Livewire\Pages\Users\Form as EditUser;
 
 Route::get('/', HomePage::class)->name('home-page');
 Route::get('/about', AboutPage::class)->name('about-page');
+Route::get('tours', ToursPage::class)->name('tours-page');
+Route::get('tours/category/{category}/', CategorizedToursPage::class)->name('categorized-tours-page');
+Route::get('tours/{tour}', TourDetailsPage::class)->name('tour-details-page');
+Route::get('tour-destinations', DestinationsPage::class)->name('destinations-page');
+Route::get('tour-destinations/{destination}', DestinationDetailsPage::class)->name('destination-details-page');
+Route::get('tours/book/{tour}', BookTour::class)->name('book-tour');
+Route::get('tours/booking-status/{booking}', BookTourSuccess::class)->name('book-tour-success');
 
 Route::middleware(['authenticated_user'])->group(function() {
     Route::prefix('staff')->group(function() {

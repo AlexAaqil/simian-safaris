@@ -72,14 +72,6 @@
         }
     }
 
-    .image {
-        @apply rounded-lg;
-
-        img {
-            @apply rounded-lg;
-        }
-    }
-
     .actions {
         @apply flex items-center gap-2;
 

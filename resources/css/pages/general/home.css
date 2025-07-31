@@ -1,5 +1,9 @@
 .HomePage {
     section {
+        &:not(:first-of-type) {
+            @apply py-16;
+        }
+
         .section_header {
             @apply mb-4;
 
@@ -47,7 +51,7 @@
     }
 
     .About {
-        @apply py-16 bg-gray-100;
+        @apply bg-gray-100;
 
         .container {
             @apply grid grid-cols-1 md:grid-cols-2 items-center justify-between gap-8;
@@ -72,9 +76,27 @@
         }
     }
 
-    .CTA {
-        @apply py-16;
+    .Tours {
+        .container {
+            .section_header {
+                @apply text-center;
+            }
+        }
+    }
 
+    .Destinations {
+        .container {
+            .section_header {
+                @apply text-center;
+            }
+
+            .destinations_list {
+                @apply lg:grid-cols-4;
+            }
+        }
+    }
+
+    .CTA {
         .container {
             @apply grid grid-cols-1 md:grid-cols-2 gap-8;
 
