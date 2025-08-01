@@ -1,6 +1,16 @@
 @import './globals.css';
 
 .app_layout {
+    @apply grid grid-cols-1 md:grid-cols-12 min-h-screen;
+
+    .app_navbar {
+        @apply md:col-span-2;
+    }
+
+    .app_layout_container {
+        @apply md:col-span-10;
+    }
+
     .container {
         @apply min-w-full px-4 py-2 mx-auto;
 

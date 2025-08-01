@@ -15,12 +15,14 @@
         @endisset
     </head>
     <body>
-        <livewire:partials.app-navbar />
-
         <livewire:partials.flash-messages />
 
         <main class="app_layout">
-            {{ $slot }}
+            <livewire:partials.app-navbar />
+
+            <div class="app_layout_container">
+                {{ $slot }}
+            </div>
         </main>
 
         {{-- Livewire --}}

@@ -26,11 +26,11 @@
         @apply relative flex items-center justify-center min-h-[90dvh] w-full overflow-hidden;
 
         video {
-            @apply absolute inset-0 w-full h-full object-cover z-0
+            @apply absolute inset-0 w-full h-full object-cover z-0;
         }
 
         .mask {
-            @apply absolute inset-0 bg-black/20 z-10;
+            @apply absolute inset-0 bg-black/10 z-10;
         }
 
         .content {
