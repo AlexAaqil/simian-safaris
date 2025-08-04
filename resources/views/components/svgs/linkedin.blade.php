@@ -1,9 +1,3 @@
-<!-- <svg {{ $attributes->merge(['class' => 'w-6 h-6']) }} fill="currentColor" viewBox="0 0 24 24">
-    <path d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1 4.6 1 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2zM1 8.5h4V23H1V8.5zM8 8.5h3.6v2H11.7c.5-.9 1.8-2 3.8-2 4.1 0 4.9 2.7 4.9 6.2V23h-4v-6.8c0-1.6-.1-3.6-2.2-3.6s-2.6 1.7-2.6 3.4V23H8V8.5z"/>
-</svg> -->
-
-<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" {{ $attributes->merge(['class' => 'w-5 h-5']) }}>
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 9h4v12H2z" />
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 2a2 2 0 100 4 2 2 0 000-4z" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" {{ $attributes->merge(['class' => 'w-5 h-5']) }}>
+    <path d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm5 170.2l66.5 0 0 213.8-66.5 0 0-213.8zm71.7-67.7a38.5 38.5 0 1 1 -77 0 38.5 38.5 0 1 1 77 0zM317.9 416l0-104c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9l0 105.8-66.4 0 0-213.8 63.7 0 0 29.2 .9 0c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9l0 117.2-66.4 0z"/>
 </svg>

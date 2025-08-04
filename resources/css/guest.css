@@ -5,9 +5,32 @@
         @apply px-4 py-6 md:px-16 mx-auto;
     }
 
+    section {
+        &:not(:first-of-type) {
+            @apply py-16;
+        }
+
+        .section_header {
+            @apply mb-4;
+
+            h2 {
+                @apply text-2xl md:text-3xl font-bold;
+            }
+
+            p {
+                @apply text-[var(--themed-text)] font-semibold mb-2;
+            }
+        }
+
+        button,
+        a.btn {
+            @apply bg-[var(--themed-btn)] hover:bg-[var(--themed-btn-hover)] text-white rounded-full;
+        }
+    }
+
     .CustomJumbotron {
         @apply relative w-full min-h-[30vh] bg-cover bg-center flex items-center justify-center;
-        background-image: url('/public/assets/images/elephants.png');
+        background-image: url('/public/assets/images/jumbotron-bg.jpg');
 
         &::before {
             content: '';
@@ -148,6 +171,43 @@
             @apply my-6 border-t border-gray-200;
         }
     }
+
+    .CTA {
+        .container {
+            @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+
+            .image {
+                @apply h-[450px] justify-self-center;
+            }
+
+            .content {
+                .text {
+                    p {
+                        @apply max-w-2xl;
+                    }
+
+                    .trust_badges {
+                        @apply  grid grid-cols-5 gap-4 items-center mt-6 mb-8;
+                        .image {
+                            @apply w-[100px] h-[100px] bg-transparent;
+
+                            img {
+                                @apply w-full h-full object-contain;
+                            }
+                        }
+                    }
+
+                    .buttons_group {
+                        @apply mt-8;
+
+                        a.btn_secondary {
+                            @apply bg-transparent border border-[var(--themed-btn)] text-[var(--themed-btn)];
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @import './components/forms.css';
@@ -157,10 +217,7 @@
 @import './partials/footer.css';
 
 @import './pages/Tours.css';
-@import './pages/general/home.css';
+@import './pages/general/HomePage.css';
+@import './pages/general/AboutPage.css';
+@import './pages/general/ContactPage.css';
 @import './pages/Authentication.css';
-
-/*
-@import './pages/general/about-page.css';
-@import './pages/general/contact.css';
-*/

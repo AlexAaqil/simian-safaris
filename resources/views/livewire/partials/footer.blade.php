@@ -52,10 +52,10 @@
                     <a href="{{ config('app.linkedin') }}" target="_blank" rel="noopener noreferrer">
                         <x-svgs.linkedin />
                     </a>
-                    {{-- <a href="{{ config('app.whatsapp') }}" target="_blank" rel="noopener noreferrer">
+                    <a href="{{ config('app.whatsapp') }}" target="_blank" rel="noopener noreferrer">
                         <x-svgs.whatsapp />
                     </a>
-                    <a href="{{ config('app.tiktok') }}" target="_blank" rel="noopener noreferrer">
+                    {{-- <a href="{{ config('app.tiktok') }}" target="_blank" rel="noopener noreferrer">
                         <x-svgs.tiktok />
                     </a> --}}
                 </div>

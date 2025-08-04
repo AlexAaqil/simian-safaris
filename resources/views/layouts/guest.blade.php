@@ -16,6 +16,8 @@
     @endif
 </head>
 <body class="antialiased">
+    <livewire:partials.flash-messages />
+
     <livewire:partials.navbar />
 
     <main class="guest_layout">

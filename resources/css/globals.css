@@ -1,6 +1,7 @@
 @import "./tailwind.css";
 
 :root {
+    --subtle-bg: #f3f4f6;
     --themed-bg: #0DA248;
     --themed-text: #B44E09;
     --themed-btn: #B44E09;

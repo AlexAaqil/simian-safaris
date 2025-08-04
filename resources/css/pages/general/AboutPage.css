@@ -1,0 +1,99 @@
+.AboutPage {
+    .themed_text,
+    p.title {
+        @apply text-[var(--themed-text)] font-bold tracking-wide;
+    }
+
+    p.title {
+        @apply mt-6 mb-2 text-2xl;
+    }
+
+    .About {
+        .container {
+            @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+
+            .content {
+                .text {
+                    @apply lg:w-[85%];
+                }
+            }
+
+            .images {
+                @apply lg:grid lg:grid-cols-2 gap-8;
+
+                .image {
+                    @apply bg-transparent;
+                }
+
+                .image_one {
+                    @apply h-[45dvh];
+                }
+
+                .other_images {
+                    @apply lg:space-y-2;
+
+                    .image_two,
+                    .image_three {
+                        @apply hidden lg:block;
+                    }
+
+                    .image_two {
+                        @apply h-[19dvh];
+                    }
+
+                    .image_three {
+                        @apply h-[25dvh];
+                    }
+                }
+            }
+        }
+    }
+
+    .MissionStatements {
+        @apply bg-[var(--subtle-bg)];
+
+        .container {
+            @apply grid grid-cols-1 lg:grid-cols-2 gap-8;
+
+            .image {
+                @apply h-[60dvh];
+            }
+
+            .content {
+                @apply lg:py-4;
+            }
+        }
+    }
+
+    .MoreInfo {
+        .container {
+            .section_header {
+                @apply text-center;
+            }
+
+            .more_content {
+                @apply grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8;
+
+                .content {
+                    @apply lg:w-[88%];
+
+                    ul {
+                        @apply list-disc pl-6;
+
+                        li {
+                            @apply mb-2;
+
+                            span {
+                                @apply font-bold italic tracking-wide;
+                            }
+                        }
+                    }
+                }
+
+                .image {
+                    @apply h-[70dvh] w-[95%] mx-auto;
+                }
+            }
+        }
+    }
+}

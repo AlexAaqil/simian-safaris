@@ -21,10 +21,11 @@ return [
     'email' => 'info@simiansafaris.com',
     'phone_number' => '+254 758 496 127',
     'secondary_phone_number' => '+254 100 741 147',
+    'whatsapp_number' => '+254 758 496 127',
     'instagram' => 'https://www.instagram.com/simiansafaris',
     'facebook' => 'https://www.facebook.com/SimianSafaris',
     'linkedin' => 'https://www.linkedin.com/in/simian-safaris-0a8ab9330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-    'whatsapp' => 'https://wa.me/254722961971',
+    'whatsapp' => 'https://wa.me/254758496127',
     'tiktok' => 'https://www.tiktok.com/@qing_jia_safaris?_t=ZM-8xfXL0dbaEA&_r=1',
 
     /*
