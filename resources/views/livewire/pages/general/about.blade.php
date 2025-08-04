@@ -106,5 +106,5 @@
         </div>
     </section>
 
-    <livewire:partials.cta />
+    <livewire:partials.call-to-action />
 </div>

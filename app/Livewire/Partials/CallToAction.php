@@ -4,10 +4,10 @@ namespace App\Livewire\Partials;
 
 use Livewire\Component;
 
-class Cta extends Component
+class CallToAction extends Component
 {
     public function render()
     {
-        return view('livewire.partials.cta');
+        return view('livewire.partials.call-to-action');
     }
 }
