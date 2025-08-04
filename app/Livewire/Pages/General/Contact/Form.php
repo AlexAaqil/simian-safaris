@@ -42,17 +42,20 @@ class Form extends Component
 
         try {
             ContactMessage::create($validated_data);
+
             $this->reset();
 
-            session()->flash('notify', [
-                'message' => 'Thank you for your message. We will get back to you soon.',
-                'type' => 'success',
-            ]);
+            $this->dispatch(
+                'notify',
+                message: 'Thank you for your message. We will get back to you soon.',
+                type: 'success'
+            );
         } catch (Exception $e) {
-            session()->flash('notify', [
-                'message' => 'Sorry, an error occured when sending your message. Please try again.',
-                'type' => 'error',
-            ]);
+            $this->dispatch(
+                'notify',
+                message: 'Sorry, an error occured when sending your message. Please try again.',
+                type: 'error'
+            );
         }
     }
 

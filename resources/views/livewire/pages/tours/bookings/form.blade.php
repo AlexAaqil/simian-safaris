@@ -10,15 +10,6 @@
     </div>
 
     <div class="BookTourForm container">
-        @if(isset($errors) && $errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
         <div class="custom_form">
             <form wire:submit.prevent="submit" class="space-y-4">
                 <div class="inputs_group">
