@@ -1,6 +1,10 @@
 {
+  "public/assets/images/jumbotron-bg.jpg": {
+    "file": "assets/jumbotron-bg-DIHjOQ21.jpg",
+    "src": "public/assets/images/jumbotron-bg.jpg"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-C3RYMRTa.css",
+    "file": "assets/app-Cku-nHZj.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "names": [
@@ -8,7 +12,7 @@
     ]
   },
   "resources/css/guest.css": {
-    "file": "assets/guest-CxtbkPGt.css",
+    "file": "assets/guest-B0vvz5rd.css",
     "src": "resources/css/guest.css",
     "isEntry": true,
     "names": [
