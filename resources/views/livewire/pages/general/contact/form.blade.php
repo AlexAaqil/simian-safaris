@@ -24,7 +24,7 @@
     </div>
 
     <button type="submit" wire:loading.attr="disabled" wire:target="submitMessage">
-        <span wire:loading.remove wire:target="submitMessage">Send Message</span>
-        <span wire:loading wire:target="submitMessage">Sending...</span>
+        <span wire:loading.remove wire:target="submitMessage">Request A Callback</span>
+        <span wire:loading wire:target="submitMessage">Sending Your Callback Request...</span>
     </button>
 </form>
