@@ -4,7 +4,7 @@ namespace App\Livewire\Partials;
 
 use Livewire\Component;
 
-class CTA extends Component
+class Cta extends Component
 {
     public function render()
     {
