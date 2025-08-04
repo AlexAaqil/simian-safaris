@@ -17,27 +17,33 @@
                         [
                             'route' => 'dashboard',
                             'label' => 'Dashboard',
+                            'wire_navigate' => false, // explicitly no wire:navigate
                         ],
                         [
                             'route' => 'users.index',
                             'label' => 'Users',
                             'can' => $user && $user->isAdmin(),
+                            'wire_navigate' => true,
                         ],
                         [
                             'route' => 'tours.index',
                             'label' => 'Tours',
+                            'wire_navigate' => true,
                         ],
                         [
                             'route' => 'bookings.index',
                             'label' => 'Bookings',
+                            'wire_navigate' => true,
                         ],
                         [
                             'route' => 'gallery.index',
                             'label' => 'Gallery',
+                            'wire_navigate' => true,
                         ],
                         [
                             'route' => 'contact-messages.index',
                             'label' => 'Messages',
+                            'wire_navigate' => true,
                         ],
                     ];
                 @endphp
@@ -47,7 +53,7 @@
                         <a
                             href="{{ Route::has($item['route']) ? route($item['route']) : '#' }}"
                             class="{{ Route::is($item['route']) ? 'active' : '' }}"
-                            wire:navigate
+                            @if (!empty($item['wire_navigate'])) wire:navigate @endif
                         >
                             {{ $item['label'] }}
                         </a>

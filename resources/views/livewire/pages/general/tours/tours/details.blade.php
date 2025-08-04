@@ -46,9 +46,9 @@
             </div>
 
             <div class="action_btn">
-                <p>Ready for the adventure of a lifetime? Secure your spot now!</p>
+                <p>Your thrill for adventure and serenity of African nature begins here. Book your spot now!</p>
                 <div class="buttons_group">
-                    <a href="{{ Route::has('book-tour') ? route('book-tour', $tour->slug) : '#' }}" wire:navigate class="btn btn_link">Book This Tour</a>
+                    <a href="{{ Route::has('book-tour') ? route('book-tour', $tour->slug) : '#' }}" wire:navigate class="btn btn_themed">Book This Tour</a>
                 </div>
             </div>
         </div>

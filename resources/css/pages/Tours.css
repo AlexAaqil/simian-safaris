@@ -99,11 +99,11 @@
             .action_btn {
                 @apply mt-8;
 
-                .buttons_group {
+                /* .buttons_group {
                     .btn {
                         @apply bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-lg tracking-wide;
                     }
-                }
+                } */
             }
         }
     }
@@ -225,6 +225,23 @@
                 &:last-of-type {
                     @apply col-span-9 font-semibold;
                 }
+            }
+        }
+    }
+}
+
+.BookTourPage {
+    .BookTourForm {
+        .custom_form {
+            @apply lg:py-6 lg:w-[85%] lg:mx-auto;
+
+            .inputs_group,
+            .inputs {
+                @apply my-3;
+            }
+
+            button {
+                @apply w-full;
             }
         }
     }
