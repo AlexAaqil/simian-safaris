@@ -22,7 +22,7 @@ class TourController extends Controller
     {
         $validated_data = $request->validated();
 
-        unset($validated_data['images']);
+        unset($validated_data['images'], $validated_data['itineraries']);
 
         $tour = Tour::create($validated_data);
 
