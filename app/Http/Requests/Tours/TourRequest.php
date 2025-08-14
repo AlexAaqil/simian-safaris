@@ -35,30 +35,21 @@ class TourRequest extends FormRequest
             'is_published' => ['boolean'],
             'summary' => ['required','string','max:255'],
             'description' => ['nullable','string'],
-            'duration_days' => ['required','integer'],
-            'duration_nights' => ['nullable','integer'],
+            'duration_days' => ['required','integer','min:1'],
+            'duration_nights' => ['nullable','integer','min:0'],
             'currency' => ['required','string','in:$'],
-            'price' => ['required','numeric'],
-            'price_ranges_to' => ['nullable','numeric'],
+            'price' => ['required','numeric','min:0'],
+            'price_ranges_to' => ['nullable','numeric','min:0'],
+
             'tour_category_id' => ['required','exists:tour_categories,id'],
 
-            'images.*' => 'nullable|image|max:2048',
+            'images' => ['nullable', 'array', 'max:5'],
+            'images.*' => ['image', 'mimes:jpeg,png,jpg,gif,webp', 'max:2048'],
 
-            'itineraries' => ['nullable', 'array'], // <-- prevents structure errors
-
-            'itineraries.*.title' => [
-                'required_with:itineraries.*.day_number,itineraries.*.description',
-                'string',
-                'max:255',
-            ],
-            'itineraries.*.description' => [
-                'required_with:itineraries.*.title,itineraries.*.day_number',
-                'string',
-            ],
-            'itineraries.*.day_number' => [
-                'required_with:itineraries.*.title,itineraries.*.description',
-                'integer',
-            ],
+            'itineraries' => ['nullable', 'array'],
+            'itineraries.*.title' => ['required_with:itineraries', 'string', 'max:255'],
+            'itineraries.*.description' => ['required_with:itineraries', 'string'],
+            'itineraries.*.sort_order' => ['required_with:itineraries', 'integer', 'min:1'],
         ];
     }
 
@@ -69,13 +60,14 @@ class TourRequest extends FormRequest
             'title.unique' => 'This title is already taken. Please choose another.',
             'title.max' => 'Title must not exceed 120 characters.',
 
-            'itineraries.*.title.required_with' => 'Please fill in the itinerary title.',
-            'itineraries.*.description.required_with' => 'Please provide a description.',
-            'itineraries.*.day_number.required_with' => 'Please provide a day number.',
-            'itineraries.*.day_number.integer' => 'Day number must be a number like 1, 2, 3...',
+            'itineraries.*.title.required' => 'Each itinerary item requires a title',
+            'itineraries.*.description.required' => 'Each itinerary item requires a description',
+            'itineraries.*.sort_order.required' => 'Each itinerary item requires a day number',
+            'itineraries.*.sort_order.integer' => 'Day number must be a whole number',
+            'itineraries.*.sort_order.min' => 'Day number must be at least 1',
 
-            'image.*.image' => 'The uploaded file must be an image.',
-            'image.*.max' => 'Image must be under 2MB.',
+            'images.*.image' => 'The uploaded file must be an image.',
+            'images.*.max' => 'Image must be under 2MB.',
         ];
     }
 }

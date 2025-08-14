@@ -138,42 +138,47 @@
     @push('scripts')
         <x-ckeditor />
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const wrapper = document.getElementById('itineraries-wrapper');
-                let itineraryIndex = parseInt(wrapper.dataset.itineraryIndex || 0);
+document.addEventListener('DOMContentLoaded', function () {
+    const wrapper = document.getElementById('itineraries-wrapper');
 
-                document.getElementById('add-itinerary').addEventListener('click', function () {
-                    const newRow = document.createElement('div');
-                    newRow.classList.add('itinerary-row', 'border', 'rounded-sm', 'p-2', 'my-4');
-                    newRow.innerHTML = `
-                        <div class="inputs_group_3">
-                            <div class="inputs">
-                                <label>Day Number</label>
-                                <input type="number" name="itineraries[${itineraryIndex}][day_number]" />
-                            </div>
-                            <div class="inputs">
-                                <label>Title</label>
-                                <input type="text" name="itineraries[${itineraryIndex}][title]" />
-                            </div>
-                            <div class="inputs">
-                                <label>Description</label>
-                                <textarea name="itineraries[${itineraryIndex}][description]"></textarea>
-                            </div>
-                        </div>
-                        <button type="button" class="btn_danger remove-itinerary">Remove</button>
-                    `;
+    // Initialize index based on existing items
+    let itineraryIndex = wrapper.querySelectorAll('.itinerary-row').length;
 
-                    wrapper.appendChild(newRow);
-                    itineraryIndex++;
-                    wrapper.dataset.itineraryIndex = itineraryIndex;
-                });
+    document.getElementById('add-itinerary').addEventListener('click', function () {
+        const newRow = document.createElement('div');
+        newRow.classList.add('itinerary-row', 'border', 'rounded-sm', 'p-2', 'my-4');
+        newRow.innerHTML = `
+            <div class="inputs_group_3">
+                <div class="inputs">
+                    <label>Day Number</label>
+                    <input type="number" name="itineraries[${itineraryIndex}][sort_order]"
+                           value="${itineraryIndex + 1}" min="1" required>
+                </div>
+                <div class="inputs">
+                    <label>Title</label>
+                    <input type="text" name="itineraries[${itineraryIndex}][title]" required>
+                </div>
+            </div>
+            <div class="inputs">
+                <label>Description</label>
+                <textarea name="itineraries[${itineraryIndex}][description]" required></textarea>
+            </div>
+            <button type="button" class="btn_danger remove-itinerary">Remove</button>
+        `;
 
-                wrapper.addEventListener('click', function (e) {
-                    if (e.target.classList.contains('remove-itinerary')) {
-                        e.target.closest('.itinerary-row').remove();
-                    }
-                });
-            });
+        wrapper.appendChild(newRow);
+        itineraryIndex++;
+    });
+
+    // Delegate event for remove buttons
+    wrapper.addEventListener('click', function (e) {
+        if (e.target.classList.contains('remove-itinerary')) {
+            if (confirm('Are you sure you want to remove this itinerary?')) {
+                e.target.closest('.itinerary-row').remove();
+            }
+        }
+    });
+});
         </script>
 
         <script src="{{ asset('assets/js/jquery.js') }}"></script>
