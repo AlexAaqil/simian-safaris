@@ -30,7 +30,7 @@ class BookingConfirmationMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Qing Jia Safaris Booking Confirmation',
+            subject: 'Simian Safaris Booking Confirmation',
         );
     }
 
