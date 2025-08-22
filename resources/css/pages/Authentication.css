@@ -51,6 +51,8 @@
             @apply mb-20;
 
             header {
+                @apply px-8;
+
                 h2 {
                     @apply text-lg font-medium text-gray-900;
                 }

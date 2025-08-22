@@ -6,7 +6,9 @@
         </p>
     </header>
 
-    <button x-data @click="$dispatch('open-modal', 'confirm-user-deletion')" class="btn_danger">Delete Account</button>
+    <div class="custom_form">
+        <button x-data @click="$dispatch('open-modal', 'confirm-user-deletion')" class="btn_danger">Delete Account</button>
+    </div>
 
     <x-modal name="confirm-user-deletion" :show="$errors->isNotEmpty()" focusable>
         <div class="custom_form">

@@ -4,6 +4,10 @@
 
         <livewire:auth.profile.update-password />
 
-        <livewire:auth.profile.delete-user />
+        @auth
+            @unless(auth()->user()->isAdmin())
+                <livewire:auth.profile.delete-user />
+            @endunless
+        @endauth
     </div>
 </div>
