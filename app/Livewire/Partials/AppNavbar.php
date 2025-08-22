@@ -16,12 +16,14 @@ class AppNavbar extends Component
 
     public function mount(): void
     {
-        $this->refreshName();
+        if (Auth::check()) {
+            $this->refreshName();
+        }
     }
 
-    public function refreshName($name = null)
+    public function refreshName($name = null): void
     {
-        $this->name = $name ?? Auth::user()->full_name;
+        $this->name = $name ?? optional(Auth::user())->full_name ?? '';
     }
 
     public function logout(Logout $logout)
