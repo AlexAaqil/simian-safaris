@@ -63,3 +63,11 @@
         }
     }
 }
+
+.StaffDashboard {
+    .Charts {
+        .container {
+            @apply grid-cols-1 md:grid-cols-8;
+        }
+    }
+}

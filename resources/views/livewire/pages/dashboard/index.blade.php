@@ -7,5 +7,7 @@
 
     @if(auth()->user()->isAdmin())
         <livewire:pages.dashboard.admin />
+    @else
+        <livewire:pages.dashboard.staff />
     @endif
 </div>
