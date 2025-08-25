@@ -66,7 +66,8 @@
                         <span>{{ config('app.secondary_phone_number') }}</span>
                     </p>
                     <p>
-                        {{ config('app.email') }}
+                        <span>{{ config('app.email') }}</span>
+                        <span>{{ config('app.other_email') }}</span>
                     </p>
                 </div>
             </div>

@@ -19,6 +19,7 @@ return [
     'city' => 'Nairobi, Kenya',
     'address' => 'CPF Metropark (Travellers House), <br />5th Floor, <br />Unit Door No. 10, <br />Opposite City Hall Annex, <br />Mama Ngina Street, <br />Nairobi',
     'email' => 'info@simiansafaris.com',
+    'other_email' => 'africasimiansafaris@gmail.com',
     'phone_number' => '+254 758 496 127',
     'secondary_phone_number' => '+254 100 741 147',
     'whatsapp_number' => '+254 758 496 127',
