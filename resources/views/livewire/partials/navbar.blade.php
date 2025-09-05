@@ -50,7 +50,7 @@
                 @auth
                     <button wire:click="logout" class="btn btn_danger">Logout</button>
                 @else
-                    <a href="{{ Route::has('tours-page') ? route('tours-page') : '#' }}">Plan Your Safari</a>
+                    <a href="{{ Route::has('tours-page') ? route('tours-page') : '#' }}" wire:navigate>Plan Your Safari</a>
                 @endauth
             </div>
         </div>
