@@ -34,7 +34,7 @@
                 <h3>Safaris</h3>
                 <div class="links">
                     @foreach ($categories as $category)
-                        <a href="{{ Route::has('categorized-tours-page') ? route('categorized-tours-page', $category->slug) : '#' }}">{{ Str::title($category->title) }}</a>
+                        <a href="{{ Route::has('categorized-tours-page') ? route('categorized-tours-page', $category->slug) : '#' }}" wire:navigate>{{ Str::title($category->title) }}</a>
                     @endforeach
                 </div>
             </div>
