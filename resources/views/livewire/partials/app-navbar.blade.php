@@ -36,11 +36,6 @@
                             'wire_navigate' => true,
                         ],
                         [
-                            'route' => 'gallery.index',
-                            'label' => 'Gallery',
-                            'wire_navigate' => true,
-                        ],
-                        [
                             'route' => 'contact-messages.index',
                             'label' => 'Messages',
                             'wire_navigate' => true,

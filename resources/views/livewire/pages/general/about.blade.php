@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="text">
-                    <p>At Simian Safaris, we believe that every adventure has a story, and we’re here to help you write yours. Whether you’re drawn to the thrill of wildlife encounters, the serenity of breathtaking landscapes, or immersive cultural experiences, our expertly crafted safaris offer more than just a journey – they promise unforgettable adventures.</p>
+                    <p>At Simian Safaris, we believe that every adventure has a story, and we’re here to help you write yours. Whether you’re drawn to the thrill of wildlife encounters, the serenity of breathtaking landscapes, or immersive cultural experiences, our expertly crafted safaris offer more than just a journey – we commit to provide unforgettable adventures.</p>
                     <p>We are on <a href="https://www.safaribookings.com/" target="_blank" referrerpolicy="no-referrer" class="themed_text">Safari Bookings</a>.</p>
                 </div>
             </div>

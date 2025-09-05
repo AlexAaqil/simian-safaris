@@ -43,7 +43,6 @@
                 </div>
 
                 <a href="{{ Route::has('destinations-page') ? route('destinations-page') : '#' }}" class="{{ Route::is('destinations-page') ? 'active' : '' }}" wire:navigate>Destinations</a>
-                <a href="{{ Route::has('gallery-page') ? route('gallery-page') : '#' }}" class="{{ Route::is('gallery-page') ? 'active' : '' }}" wire:navigate>Gallery</a>
                 <a href="{{ Route::has('contact-page') ? route('contact-page') : '#' }}" class="{{ Route::is('contact-page') ? 'active' : '' }}" wire:navigate>Contact</a>
             </div>
 
