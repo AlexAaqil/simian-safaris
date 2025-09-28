@@ -35,12 +35,12 @@
                     <div class="content">
                         <div class="info">
                             <h3 class="title">{{ $tour->title }}</h3>
-                            <p class="price">
+                            {{-- <p class="price">
                                 <span>{{ $tour->currency }} {{ $tour->price }}</span>
                                 @if($tour->price_ranges_to)
                                     <span> - {{ $tour->currency }} {{ $tour->price_ranges_to }}</span>
                                 @endif
-                            </p>
+                            </p> --}}
                         </div>
 
                         <div class="crud">

@@ -21,12 +21,12 @@
         <div class="content_wrapper">
             <h2 class="title">{{ $tour->title }}</h2>
 
-            <p class="price">
+            {{-- <p class="price">
                 <span>$ {{ $tour->price }}</span>
                 @if($tour->price_ranges_to)
                 <span>- $ {{ $tour->price_ranges_to }}</span>
                 @endif
-            </p>
+            </p> --}}
 
             <p class="summary">{{ $tour->summary }}</p>
 

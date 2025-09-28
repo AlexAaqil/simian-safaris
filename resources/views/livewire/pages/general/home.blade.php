@@ -57,12 +57,12 @@
 
                         <div class="content">
                             <p class="title">{{ $tour->title }}</p>
-                            <p class="price">
+                            {{-- <p class="price">
                                 <span>$ {{ number_format($tour->price) }}</span>
                                 @if($tour->price_ranges_to)
                                     <span>- $ {{ number_format($tour->price_ranges_to, 2) }}</span>
                                 @endif
-                            </p>
+                            </p> --}}
                             <div class="button_wrapper">
                                 <a href="{{ Route::has('tour-details-page') ? route('tour-details-page', $tour->slug) : '#' }}" wire:navigate class="btn_link">View</a>
                             </div>
